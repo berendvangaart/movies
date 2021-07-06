@@ -1,14 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="./data.js"></script>
     <script defer src="./js/script.js"></script>
     <link rel="icon" href="./resources/icon.png">
     <title>MOVIES</title>
 </head>
+
 <body>
-    
+    <header>
+        <h1>Movie filter</h1>
+    </header>
+
+    <nav id=radio-list>
+        <input type="radio" id="latest" name="category" value="latest">
+        <label for="latest">Latest movies</label>
+        <input type="radio" id="avenger" name="category" value="avenger">
+        <label for="avenger">Avenger films</label>
+        <input type="radio" id="x-men" name="category" value="x-men">
+        <label for="x-men">X-Men films</label>
+        <input type="radio" id="princess" name="category" value="princess">
+        <label for="princess">Princess films</label>
+        <input type="radio" id="batman" name="category" value="batman">
+        <label for="batman">Batman films</label>
+    </nav>
+
+    <main>
+        <ul id="movie-list">
+
+        </ul>
+    </main>
+
 </body>
+
 </html>
