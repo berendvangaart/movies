@@ -1,8 +1,12 @@
 const movieList = document.getElementById('movie-list');
 const radioList = document.getElementById('radio-list');
 
+radioList.addEventListener('change', e => {
+    if (e.target.id) filterMovies(e.target.id);
+})
+
 const filterMovies = filter => {
-    const moviesForDisplay = movies.filter(m => {
+    const moviesForDisplay = movies.filter( m => {
         if (filter === "" || filter === undefined) {
             return m
         } else if (filter === "latest") {
@@ -18,18 +22,23 @@ const displayMoviesinDom = movies => {
     while (movieList.firstChild) {
         movieList.removeChild(movieList.firstChild);
     }
+    
     const formatedMovies = movies.map(m => {
-        const movie = document.createElement('li');
-        movie.innerHTML = m.Title;
-        return movie;
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        const img = document.createElement('img');
+        a.target = '_blank'
+        a.href = `http://www.imdb.com/title/${m.imdbID}`;
+        img.src = m.Poster;
+        a.appendChild(img)
+        li.appendChild(a)
+
+        return li;
     })
+
     formatedMovies.forEach(m => {
         movieList.appendChild(m);
     });
 }
-
-radioList.addEventListener('change', e => {
-    if (e.target.id) filterMovies(e.target.id);
-})
 
 filterMovies();
