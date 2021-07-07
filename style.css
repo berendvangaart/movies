@@ -4,21 +4,44 @@
 
 }
 
+header {
+    display: flex;
+    margin-left: 1.5rem;
+}
+
 body {
     background: rgb(20, 20, 20);
-
 }
 
 h1 {
+    margin-top: 1rem;
     font-family: 'Roboto Slab', serif;
     font-size: 50px;
-    color: aliceblue;
+    color: antiquewhite;
     font-weight: lighter;
+}
+
+#radio-list {
+    padding: 2em;
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 label {
     color: antiquewhite;
     cursor: pointer;
+    font-family: monospace;
+    margin-right: 1rem;
+}
+
+input {
+    color: rgb(19, 18, 17);
+    cursor: pointer;
+}
+
+#searchabar {
+    color: black;
 }
 
 #movie-list {
@@ -37,7 +60,7 @@ li img {
     width: 300px;
     height: 450px;
     overflow: hidden;
-    box-shadow: 0 4px 8px 0 rgb(0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgb(24, 24, 24), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     cursor: pointer;
 }
 

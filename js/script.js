@@ -1,8 +1,13 @@
 const movieList = document.getElementById('movie-list');
 const radioList = document.getElementById('radio-list');
+const searchbar = document.getElementById('search-bar');
 
 radioList.addEventListener('change', e => {
     if (e.target.id) filterMovies(e.target.id);
+})
+
+searchbar.addEventListener('keyup', e => {
+    filterMovies(searchbar.value)
 })
 
 const filterMovies = filter => {
